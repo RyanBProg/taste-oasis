@@ -1,3 +1,17 @@
+import Image from "next/image";
+import Link from "next/link";
+import Hero from "./components/Hero";
+import Banner from "./components/Banner";
+import HomeAbout from "./components/HomeAbout";
+import ActionBanner from "./components/ActionBanner";
+
 export default function Home() {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <Hero />
+      <Banner />
+      <HomeAbout />
+      <ActionBanner />
+    </>
+  );
 }
