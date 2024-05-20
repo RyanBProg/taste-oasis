@@ -21,45 +21,43 @@ export default function Header() {
           <li>
             <Link
               href="/"
-              className={`${
-                pathname === "/" ? "bg-orange-200" : "bg-transparent"
-              } p-2 rounded-md`}>
+              className={pathname === "/" ? "nav__link--active" : "nav__link"}>
               Home
             </Link>
           </li>
           <li>
             <Link
               href="/about"
-              className={`${
-                pathname === "/about" ? "bg-orange-200" : "bg-transparent"
-              } p-2 rounded-md`}>
+              className={
+                pathname === "/about" ? "nav__link--active" : "nav__link"
+              }>
               About
             </Link>
           </li>
           <li>
             <Link
               href="/menu"
-              className={`${
-                pathname === "/menu" ? "bg-orange-200" : "bg-transparent"
-              } p-2 rounded-md`}>
+              className={
+                pathname === "/menu" ? "nav__link--active" : "nav__link"
+              }>
               Menu
             </Link>
           </li>
           <li>
             <Link
               href="/booking"
-              className={`${
-                pathname === "/booking" ? "bg-orange-200" : "bg-transparent"
-              } p-2 rounded-md`}>
+              className={
+                pathname === "/booking" ? "nav__link--active" : "nav__link"
+              }>
               Booking
             </Link>
           </li>
           <li>
             <Link
               href="/contact"
-              className={`${
-                pathname === "/contact" ? "bg-orange-200" : "bg-transparent"
-              } p-2 rounded-md`}>
+              className={
+                pathname === "/contact" ? "nav__link--active" : "nav__link"
+              }>
               Contact
             </Link>
           </li>
