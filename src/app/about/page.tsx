@@ -20,7 +20,7 @@ export default function About() {
         just a restaurant – it's a journey through the rich culinary traditions
         of Asia.
       </p>
-      <div className="flex flex-col justify-center items-center gap-4 sm:flex-row">
+      <div className="flex flex-col justify-center items-center gap-4 sm:flex-row mt-4 sm:mt-10">
         <Image
           src="/chef-steven.jpeg"
           height={960}
