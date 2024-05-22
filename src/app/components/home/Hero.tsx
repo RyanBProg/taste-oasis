@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import heroImage from "../../../../public/home-hero.jpeg";
 
 export default function Hero() {
   return (
     <section className="relative flex flex-col sm:flex-row h-[450px] bg-black overflow-hidden items-center justify-center ">
       <Image
-        src="/home-hero.png"
-        width={640}
-        height={853}
+        src={heroImage}
+        quality={100}
+        placeholder="blur"
         className="brightness-75 object-cover"
         alt="inside the restaurant"
       />

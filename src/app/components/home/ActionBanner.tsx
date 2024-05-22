@@ -1,15 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import pokeBanner from "../../../../public/poke-banner.jpeg";
 
 export default function ActionBanner() {
   return (
     <section className="flex justify-center items-center bg-gradient-to-b from-white via-orange-400 to-orange-600 py-8 px-4">
       <div className="bg-white bg-opacity-15 rounded-md flex flex-col md:flex-row items-center">
         <Image
-          src="/poke-banner.jpeg"
-          width={7517}
-          height={2947}
+          src={pokeBanner}
+          placeholder="blur"
+          quality={75}
           alt="chef cooking a meal"
           className="rounded-t-md md:rounded-md w-full md:w-[400px] h-40 md:h-full md:ml-4 object-cover"
         />
