@@ -4,7 +4,10 @@ import "./globals.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Welcome to Taste Oasis | Culinary Excellence Awaits",
@@ -18,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <body>
         <Header />
         <main>{children}</main>
