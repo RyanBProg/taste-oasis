@@ -22,7 +22,7 @@ export default function ActionBanner() {
             our contact page for more information on how to reach us.
           </p>
           <button className="bg-orange-400 text-gray-50 font-semibold p-4 rounded-md mt-6 md:mt-2 hover:bg-orange-500">
-            <Link href="/booking">Get in Touch</Link>
+            <Link href="/contact">Get in Touch</Link>
           </button>
         </div>
       </div>

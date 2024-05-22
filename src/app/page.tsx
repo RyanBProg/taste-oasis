@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import Hero from "./components/Hero";
-import Banner from "./components/Banner";
-import HomeAbout from "./components/HomeAbout";
-import ActionBanner from "./components/ActionBanner";
+import Hero from "./components/home/Hero";
+import Banner from "./components/home/Banner";
+import HomeAbout from "./components/home/HomeAbout";
+import ActionBanner from "./components/home/ActionBanner";
 
 export default function Home() {
   return (
