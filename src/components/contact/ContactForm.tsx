@@ -13,9 +13,24 @@ export default function ContactForm() {
 
   const [formInputs, setFormInputs] = useState(initialFormData);
 
-  const handleSubmit = async (e: FormEvent) => {
-    alert("Submission successful");
-    setFormInputs(initialFormData);
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+      });
+
+      if (response.ok) {
+        alert("Submission successful");
+        setFormInputs(initialFormData);
+      } else {
+        alert("Submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      alert("Submission failed");
+    }
   };
 
   const handleChange = (
