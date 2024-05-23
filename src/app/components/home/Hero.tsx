@@ -20,9 +20,11 @@ export default function Hero() {
         <p className="font-thin text-white text-lg">
           A fusion dining experience
         </p>
-        <button className="bg-orange-400 text-gray-50 font-semibold p-4 rounded-md mt-8 hover:bg-orange-500">
-          <Link href="/booking">Book a Table</Link>
-        </button>
+        <Link href="/booking">
+          <button className="btn bg-orange-400 text-gray-50 font-semibold p-4 rounded-md mt-8 hover:bg-orange-500">
+            Book a Table
+          </button>
+        </Link>
       </div>
     </section>
   );

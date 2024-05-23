@@ -31,7 +31,7 @@ export default function Menu() {
         <a
           href="/taste-oasis-menu.pdf"
           download
-          className="block max-w-max mx-auto bg-orange-400 text-gray-50 font-semibold p-4 rounded-md hover:bg-orange-500">
+          className="block max-w-max mx-auto btn bg-orange-400 text-gray-50 font-semibold p-4 rounded-md hover:bg-orange-500">
           Download Our Menu
           <svg
             xmlns="http://www.w3.org/2000/svg"

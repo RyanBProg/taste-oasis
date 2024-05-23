@@ -22,9 +22,11 @@ export default function ActionBanner() {
             Have questions or need assistance? Our team is here to help. Visit
             our contact page for more information on how to reach us.
           </p>
-          <button className="bg-orange-200 text-black font-semibold p-4 rounded-md mt-6 md:mt-2 hover:bg-orange-300">
-            <Link href="/contact">Get in Touch</Link>
-          </button>
+          <Link href="/contact">
+            <button className="btn bg-orange-200 text-black font-semibold p-4 rounded-md mt-6 md:mt-2 hover:bg-orange-300">
+              Get in Touch
+            </button>
+          </Link>
         </div>
       </div>
     </section>
