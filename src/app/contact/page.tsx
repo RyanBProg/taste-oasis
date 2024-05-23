@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us | Taste Oasis",
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
     "Get in touch with Taste Oasis. Find our location, contact details, and opening hours. We are here to assist you with any inquiries or special requests. Reach out to us today!",
 };
 
-export default function Contact() {
+export default async function Contact() {
   return (
     <>
       <div className="px-4 mt-14 mb-20 max-w-[500px] mx-auto">
@@ -17,42 +18,7 @@ export default function Contact() {
           Have a request or need further help? Just fill in our contact form and
           we'll get back to you as soon as we can.
         </p>
-        <form className="flex flex-col">
-          <label htmlFor="name" className="form-label">
-            Name
-          </label>
-          <input type="text" name="name" id="name" className="form-input" />
-
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input type="email" name="email" id="email" className="form-input" />
-
-          <label htmlFor="phone-num" className="form-label">
-            Phone Number
-          </label>
-          <input
-            type="text"
-            name="phone-num"
-            id="phone-num"
-            className="form-input"
-          />
-
-          <label htmlFor="message" className="form-label">
-            Message
-          </label>
-          <textarea
-            name="massage"
-            id="message"
-            rows={4}
-            className="form-input"
-            placeholder="Add you message here..."></textarea>
-          <button
-            type="submit"
-            className="btn bg-orange-400 text-gray-50 font-semibold p-4 rounded-md mt-2 hover:bg-orange-500">
-            Submit
-          </button>
-        </form>
+        <ContactForm />
         <div className="mt-14">
           <h2 className="font-semibold text-4xl mb-3">Our Contact Details</h2>
           <p className="text-orange-400 mb-1">Opening Hours:</p>
