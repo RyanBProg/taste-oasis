@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import NavDesktop from "./components/NavDesktop";
-import NavMobile from "./components/NavMobile";
+import NavDesktop from "./NavDesktop";
+import NavMobile from "./NavMobile";
 
 export default function Header() {
   const pathname = usePathname();
