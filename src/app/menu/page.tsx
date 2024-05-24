@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import chefBanner from "../../../public/chef-banner.jpg";
 
 export const metadata: Metadata = {
   title: "Our Menu | Taste Oasis",
@@ -11,9 +12,9 @@ export default function Menu() {
   return (
     <>
       <Image
-        src="/chef-banner.jpg"
-        height={1178}
-        width={4280}
+        src={chefBanner}
+        quality={100}
+        placeholder="blur"
         alt="chef preparing food"
         className="max-h-32 sm:max-h-40 object-cover brightness-75"
       />

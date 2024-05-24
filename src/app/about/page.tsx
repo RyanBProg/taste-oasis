@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import chefImage from "../../../public/chef-steven.jpeg";
 
 export const metadata: Metadata = {
   title: "About Us | Taste Oasis",
@@ -22,9 +23,9 @@ export default function About() {
       </p>
       <div className="flex flex-col justify-center items-center gap-4 sm:flex-row mt-4 sm:mt-10">
         <Image
-          src="/chef-steven.jpeg"
-          height={960}
-          width={640}
+          src={chefImage}
+          quality={100}
+          placeholder="blur"
           alt="portait of chef steven cooking"
           className="rounded-md h-[480px] w-[320px]"
         />
