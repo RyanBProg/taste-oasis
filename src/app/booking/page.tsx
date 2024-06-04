@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ContactForm from "@/components/contact/ContactForm";
+import BookingForm from "@/components/booking/BookingForm";
 
 export const metadata: Metadata = {
   title: "Booking | Taste Oasis",
@@ -18,7 +18,7 @@ export default async function Booking() {
           Looking to book a table? Fill in our request form and we will get back
           to you with a confirmation of your booking.
         </p>
-        <ContactForm />
+        <BookingForm />
         <div className="mt-14">
           <h2 className="font-semibold text-4xl mb-3">Our Contact Details</h2>
           <p className="text-orange-400 mb-1">Opening Hours:</p>
