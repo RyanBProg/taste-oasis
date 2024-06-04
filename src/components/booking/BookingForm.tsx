@@ -93,7 +93,7 @@ export default function BookingForm() {
         required
       />
 
-      <label htmlFor="message" className="form-label">
+      <label htmlFor="message" className="form-label mb-1">
         Booking Date
       </label>
       <Calendar
@@ -106,8 +106,8 @@ export default function BookingForm() {
       <label htmlFor="message" className="form-label mt-6">
         Booking Time
       </label>
-      <select name="" id="" className="mb-6 border-2">
-        <option value="">Select a Date</option>
+      <select name="" id="" className="form-input">
+        <option value="">Select a Time</option>
         {bookingTimes.map((time) => {
           return <option value="">{time}</option>;
         })}
