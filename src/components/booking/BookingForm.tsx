@@ -1,17 +1,28 @@
 "use client";
 
-import React, { FormEvent } from "react";
+import React, { FormEvent, SyntheticEvent } from "react";
 import { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import { bookingTimes } from "@/data/bookingTimes";
+
+type ValuePiece = Date | null;
+type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 export default function BookingForm() {
   const initialFormData = {
     name: "",
     email: "",
     number: "",
-    message: "",
   };
 
   const [formInputs, setFormInputs] = useState(initialFormData);
+  const [date, setDate] = useState<Value>(new Date());
+
+  const handleDateChange = (value: Value) => {
+    console.log(value);
+    setDate(value);
+  };
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -83,17 +94,25 @@ export default function BookingForm() {
       />
 
       <label htmlFor="message" className="form-label">
-        Message
+        Booking Date
       </label>
-      <textarea
-        name="message"
-        id="message"
-        rows={4}
-        className="form-input"
-        value={formInputs.message}
-        onChange={handleChange}
-        required
-        placeholder="Add you message here..."></textarea>
+      <Calendar
+        onClickDay={handleDateChange}
+        value={date}
+        defaultView="month"
+        minDetail="year"
+      />
+
+      <label htmlFor="message" className="form-label mt-6">
+        Booking Time
+      </label>
+      <select name="" id="" className="mb-6 border-2">
+        <option value="">Select a Date</option>
+        {bookingTimes.map((time) => {
+          return <option value="">{time}</option>;
+        })}
+      </select>
+
       <button
         type="submit"
         className="btn bg-orange-400 text-gray-50 font-semibold p-4 rounded-md mt-2 hover:bg-orange-500">
